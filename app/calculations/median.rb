@@ -14,11 +14,11 @@ class Median < Patterns::Calculation
   end
 
   def even_median
-    (sorted_input[input_idx] + sorted_input[input_idx - 1]) / 2.0
+    @even_median ||= (sorted_input[input_idx] + sorted_input[input_idx - 1]) / 2.0
   end
 
   def odd_median
-    sorted_input[input_idx]
+    @odd_median ||= sorted_input[input_idx]
   end
 
   def sorted_input
